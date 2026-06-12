@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /README.md
 
-Sitemap: https://www.raufayar.net/sitemap.xml
+Sitemap: https://raufayar.net/sitemap.xml
