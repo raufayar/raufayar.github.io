@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecosystem | Rauf Ayar</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #0d1117; color: #c9d1d9; padding: 2rem; margin: 0; }
+        .container { max-width: 900px; margin: 0 auto; }
+        .back-btn { display: inline-block; background: #161b22; color: #c9d1d9; border: 1px solid #30363d; padding: 0.5rem 1rem; border-radius: 6px; text-decoration: none; font-weight: bold; margin-bottom: 2rem; }
+        .back-btn:hover { border-color: #58a6ff; color: #fff; }
+        h1 { color: #f0f6fc; border-bottom: 1px solid #30363d; padding-bottom: 1rem; margin-top: 0; }
+        .grid-system { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; margin-bottom: 2rem; }
+        .node-btn { background: #161b22; border: 1px solid #30363d; color: #c9d1d9; padding: 1.2rem; border-radius: 8px; cursor: pointer; display: flex; align-items: center; justify-content: space-between; transition: 0.3s; font-weight: 600; }
+        .node-btn:hover { background: #30363d; border-color: #58a6ff; color: #fff; }
+        .terminal-box { background: #05070a; border: 1px solid #30363d; border-left: 4px solid #58a6ff; padding: 1.8rem; border-radius: 8px; margin-bottom: 2rem; }
+        .terminal-step { margin-bottom: 1.2rem; line-height: 1.6; color: #e6edf3; border-left: 2px solid #58a6ff; padding-left: 1rem; }
+        .terminal-step strong { color: #ff7b72; }
+    </style>
+</head>
+<body>
+
+    <a href="https://raufayar.net" class="back-btn">🏠 Back to Home</a>
+
+    <div class="container">
+        <h1 id="app-heading">Loading System Node...</h1>
+        <div id="button-grid" class="grid-system"></div>
+
+        <div id="terminal-node" class="terminal-box">
+            <div id="terminal-title-node" style="color: #58a6ff; font-weight: bold; margin-bottom: 1rem; text-transform: uppercase;"></div>
+            <div id="terminal-content-node"></div>
+        </div>
+
+        <div id="giscus-zone"></div>
+    </div>
+
+    <!-- Ana dizindeki merkezi veritabanı motorunu çağırıyoruz -->
+    <script src="../apps.js"></script>
+    <script>
+        // HANGİ KLASÖRDEYSEK ONUN ADINI YAZIYORUZ:
+        // research-lab klasöründeyse: initEngine('research-lab');
+        // data-science klasöründeyse: initEngine('data-science');
+        initEngine('research-lab'); 
+    </script>
+</body>
+</html>
