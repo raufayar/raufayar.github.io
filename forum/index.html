@@ -1,15 +1,72 @@
-<script src="https://giscus.app/client.js"
-        data-repo="raufayar/raufayar.github.io"
-        data-repo-id="R_kgDOS43ysQ"
-        data-category="General"
-        data-category-id="DIC_kwDOS43ysc4C_ECO"
-        data-mapping="pathname"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="bottom"
-        data-theme="preferred_color_scheme"
-        data-lang="en"
-        crossorigin="anonymous"
-        async>
-</script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Forum | Rauf Ayar</title>
+    <style>
+        /* GitHub ve RaufAyar.net ruhuna uygun tam uyumlu karanlık tema */
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
+            background: #0d1117; 
+            color: #c9d1d9; 
+            padding: 2rem; 
+            margin: 0;
+        }
+        .container { 
+            max-width: 850px; 
+            margin: 0 auto; 
+        }
+        h1 { 
+            color: #f0f6fc; 
+            border-bottom: 1px solid #30363d; 
+            padding-bottom: 1rem; 
+            font-size: 2.2rem;
+        }
+        p { 
+            color: #8b949e; 
+            line-height: 1.6; 
+            font-size: 1.1rem;
+        }
+        .notice {
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-left: 4px solid #58a6ff;
+            padding: 1rem;
+            border-radius: 6px;
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>🌐 Global Open-Web Forum</h1>
+        
+        <div class="notice">
+            <p><strong>Welcome to the decentralized discussion hub.</strong> This space is directly integrated with our GitHub Discussions. Share your insights, collaborate with global experts, and help us build an open web. Sign in with your GitHub account to participate.</p>
+        </div>
+        
+        <!-- KRİTİK ALAN: Giscus yorumlarının yükleneceği hedef kutu -->
+        <div class="giscus"></div>
+        
+        <!-- Senin giscus kodun -->
+        <script src="https://giscus.app/client.js"
+                data-repo="raufayar/raufayar.github.io"
+                data-repo-id="R_kgDOS43ysQ"
+                data-category="General"
+                data-category-id="DIC_kwDOS43ysc4C_ECO"
+                data-mapping="pathname"
+                data-strict="0"
+                data-reactions-enabled="1"
+                data-emit-metadata="0"
+                data-input-position="bottom"
+                data-theme="dark_dimmed"
+                data-lang="en"
+                crossorigin="anonymous"
+                async>
+        </script>
+    </div>
+
+</body>
+</html>
