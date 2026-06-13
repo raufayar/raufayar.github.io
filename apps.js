@@ -33,8 +33,15 @@
         }
         .card h3 { 
             color: #00ff9d; 
-            margin-top: 0;
-            margin-bottom: 12px;
+            margin: 0 0 12px 0;
+        }
+        .note {
+            background: #2a2a2a;
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            margin-top: 30px;
+            border-left: 4px solid #00ff9d;
         }
     </style>
 </head>
@@ -45,10 +52,14 @@
     
     <div id="button-grid" class="grid"></div>
     
-    <div id="giscus-zone" style="margin-top: 60px;"></div>
+    <!-- Giscus geçici olarak devre dışı -->
+    <div class="note">
+        <strong>Not:</strong> Giscus yorum sistemi şu anda devre dışı (localStorage hatası nedeniyle). 
+        Dosyayı bir web sunucusu üzerinden açtığında (GitHub Pages veya Live Server) tekrar aktif hale gelecektir.
+    </div>
 
 <script>
-// 🚀 GLOBAL İÇERİK VERİTABANI - Tam ve Temiz
+// 🚀 GLOBAL İÇERİK VERİTABANI
 const publicationDatabase = {
     "geo-seo": {
         heading: "Generative Engine Optimization (GEO)",
@@ -142,29 +153,9 @@ function initEngine(currentApp = "geo-seo") {
             <p>${card.body}</p>
         </div>
     `).join('');
-
-    // Giscus Yorum Sistemi
-    const giscusZone = document.getElementById("giscus-zone");
-    giscusZone.innerHTML = `<div class="giscus"></div>`;
-    
-    const script = document.createElement("script");
-    script.src = "https://giscus.app/client.js";
-    script.setAttribute("data-repo", "raufayar/raufayar.github.io");
-    script.setAttribute("data-repo-id", "R_kgDOS43ysQ");
-    script.setAttribute("data-category", "General");
-    script.setAttribute("data-category-id", "DIC_kwDOS43ysc4C_ECO");
-    script.setAttribute("data-mapping", "pathname");
-    script.setAttribute("data-strict", "0");
-    script.setAttribute("data-reactions-enabled", "1");
-    script.setAttribute("data-input-position", "bottom");
-    script.setAttribute("data-theme", "dark_dimmed");
-    script.setAttribute("data-lang", "tr");
-    script.setAttribute("crossorigin", "anonymous");
-    script.async = true;
-    giscusZone.appendChild(script);
 }
 
-// Sayfa açıldığında otomatik çalışsın
+// Sayfa açıldığında çalıştır
 window.onload = () => {
     initEngine("geo-seo");
 };
